@@ -4,7 +4,7 @@
   "description": "Fully automated YouTube channel management system with specialized AI agents",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "mkdir -p config && node -e \"require('fs').writeFileSync('config/credentials.json', process.env.YOUTUBE_CREDENTIALS_JSON)\" && node index.js",,
     "setup": "node setup.js",
     "walkthrough": "node walkthrough.js",
     "scheduler": "node schedules/daily-automation.js",
